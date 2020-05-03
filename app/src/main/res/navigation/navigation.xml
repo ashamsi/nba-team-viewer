@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navigation"
+        app:startDestination="@id/fragment_allteams">
+
+    <fragment
+            android:id="@+id/fragment_allteams"
+            android:name="com.ashamsi.nbateamviewer.view.allteams.AllTeamsFragment"
+            android:label="FragmentAllTeams"
+            tools:layout="@layout/fragment_allteams">
+
+        <action
+                android:id="@+id/action_fragment_one_to_fragment_two"
+                app:destination="@id/fragment_team"
+                app:enterAnim="@anim/slide_in_right"
+                app:popEnterAnim="@anim/slide_in_right" />
+    </fragment>
+    <fragment
+            android:id="@+id/fragment_team"
+            android:name="com.ashamsi.nbateamviewer.view.team.TeamFragment"
+            android:label="FragmentTeam"
+            tools:layout="@layout/fragment_team">
+
+        <action
+                android:id="@+id/action_fragment_two_to_fragment_one"
+                app:destination="@id/fragment_allteams"
+                app:launchSingleTop="false"
+                app:popUpTo="@+id/fragment_one"
+                app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

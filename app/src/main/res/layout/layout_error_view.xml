@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/h_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zero_dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+                android:id="@+id/txt_error_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:maxLines="5"
+                android:paddingBottom="@dimen/margin_medium"
+                android:textAlignment="center"
+                android:textSize="@dimen/title_text_size_large"
+                app:layout_constraintBottom_toTopOf="@id/btn_error_retry"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@tools:sample/lorem/random" />
+
+        <Button
+                android:id="@+id/btn_error_retry"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_dark"
+                android:minWidth="@dimen/button_minimum_width"
+                android:text="@string/error_try_again_button"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                app:elevation="@dimen/zero_dp"
+                app:layout_constraintBottom_toBottomOf="@id/h_guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/h_guideline" />
+
+        <Button
+                android:id="@+id/btn_error_cancel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@android:color/holo_green_dark"
+                android:text="@string/error_cancel_button"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                app:elevation="@dimen/zero_dp"
+                app:layout_constraintEnd_toEndOf="@id/btn_error_retry"
+                app:layout_constraintStart_toStartOf="@id/btn_error_retry"
+                app:layout_constraintTop_toBottomOf="@id/btn_error_retry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

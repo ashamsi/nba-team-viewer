@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">NBA Team Viewer</string>
+
+    <!-- Error -->
+    <string name="error_try_again_button">Try Again</string>
+    <string name="error_cancel_button">Cancel</string>
+
+    <string name="text_view_fragment_two">Fragment Two</string>
+    <string name="button_navigate_to_feature_two">Navigate Test</string>
+
+    <!-- Team -->
+    <string name="team_name">Team: %1$s</string>
+    <string name="team_wins">Wings: %1$d</string>
+    <string name="team_losses">Losses: %1$d</string>
+
+    <string name="player_name">Player: %1$s %2$s</string>
+    <string name="player_position">Position: %1$s</string>
+    <string name="player_number">Number: %1$d</string>
+
+    <!-- Teams Sort-->
+    <string-array name="teams_sort_options">
+        <item>Sort by name asc</item>
+        <item>Sort by name desc</item>
+        <item>Sort by wins</item>
+        <item>Sort by losses</item>
+    </string-array>
+
+    <!-- Tools -->
+    <string name="tools_team_name">Team Name</string>
+    <string name="tools_team_wins">Team Wings</string>
+    <string name="tools_team_losses">Team Losses</string>
+    <string name="tools_player_name">Player Name</string>
+    <string name="tools_player_position">Player Position</string>
+    <string name="tools_player_number">Player Number</string>
+</resources>

@@ -1,0 +1,26 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':domain')
+
+    // Data
+    def dataDependencies = rootProject.ext.dataDependencies
+    def dataTestDependencies = rootProject.ext.dataTestDependencies
+
+
+    implementation dataDependencies.kotlin
+
+    implementation dataDependencies.retrofit
+    implementation dataDependencies.retrofitGsonConverter
+    implementation dataDependencies.retrofitLogging
+    implementation dataDependencies.gson
+
+    testImplementation dataTestDependencies.junit
+}
+
+task assembleTest {
+    dependsOn = ["assemble", "test"]
+}
